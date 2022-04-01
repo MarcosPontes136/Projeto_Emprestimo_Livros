@@ -1,0 +1,51 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1648642125.json",
+  "title": "Root",
+  "type": "array",
+  "default": [],
+  "items":{
+    "$id": "#root/items",
+    "title": "Items",
+    "type": "object",
+    "required": [
+      "contato",
+      "email",
+      "nome"
+    ],
+    "properties": {
+      "contato": {
+        "$id": "#root/items/contato",
+        "title": "Contato",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "(11) 99999-9999"
+        ],
+        "pattern": "^.*$"
+      },
+      "email": {
+        "$id": "#root/items/email",
+        "title": "Email",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "maratona@stefanini.com"
+        ],
+        "pattern": "^.*$"
+      },
+      "nome": {
+        "$id": "#root/items/nome",
+        "title": "Nome",
+        "type": "string",
+        "default": "",
+        "examples": [
+          "Developer Up"
+        ],
+        "pattern": "^.*$"
+      }
+    }
+  }
+
+}

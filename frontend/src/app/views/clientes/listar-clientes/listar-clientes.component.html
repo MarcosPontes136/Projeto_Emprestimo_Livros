@@ -1,0 +1,41 @@
+<div class="w-100 mb-3">
+  <button mat-raised-button color="primary" class="">
+    Novo
+  </button>
+</div>
+
+<mat-table [dataSource]="clientes" class="mat-elevation-z8">
+  <!-- Header and Row Declarations -->
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+  <!-- User name Definition -->
+  <ng-container matColumnDef="nome">
+    <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.nome}} </mat-cell>
+  </ng-container>
+
+  <!-- Age Definition -->
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> E-mail </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.email}} </mat-cell>
+  </ng-container>
+
+  <!-- Title Definition -->
+  <ng-container matColumnDef="contato">
+    <mat-header-cell *matHeaderCellDef> Contato </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.contato}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="acoes">
+    <mat-header-cell *matHeaderCellDef style="width:180px"> Ações </mat-header-cell>
+    <mat-cell *matCellDef="let row" style="width:180px">
+      <button mat-raised-button color="accent" class="me-2">
+        Editar
+      </button>
+      <button mat-raised-button color="warn" class="">
+        Excluir
+      </button>
+    </mat-cell>
+  </ng-container>
+</mat-table>

@@ -1,0 +1,21 @@
+<div class="fluid-container">
+  <mat-toolbar color="primary">
+    <a mat-button [routerLink]="['/']">
+      <img src="assets/imgs/logo-trans.png" alt="Rent a Book" width="150">
+    </a>
+    <a mat-button class="me-1" [routerLink]="['/clientes/listar']"
+       routerLinkActive="router-link-active">
+      Clientes
+    </a>
+    <a mat-button class="me-1" [routerLink]="['/']" routerLinkActive="router-link-active">
+      Autores
+    </a>
+    <a mat-button class="me-1" [routerLink]="['/']" routerLinkActive="router-link-active">
+      Livros
+    </a>
+    <a mat-raised-button color="accent" class="mx-3" [routerLink]="['/']"
+       routerLinkActive="router-link-active">
+      Emprestimo
+    </a>
+  </mat-toolbar>
+</div>

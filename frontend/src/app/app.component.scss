@@ -1,0 +1,25 @@
+.mat-drawer-container {
+  height: calc(100vh - 128px);
+}
+
+::ng-deep {
+  .snackbar-container {
+    margin-top: 70px !important;
+    // color: beige;
+    &.error {
+      background-color: #e57373 !important;
+    }
+
+    &.success {
+      background-color: #81c784 !important;
+    }
+
+    &.warn {
+      background-color: #ffb74d !important;
+    }
+
+    &.info {
+      background-color: #4fc3f7 !important;
+    }
+  }
+}
