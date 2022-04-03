@@ -12,9 +12,7 @@ public class ClienteDto {
 
     private String nome;
 
-
     private String contato;
-
 
     public String getEmail() {
         return email;
