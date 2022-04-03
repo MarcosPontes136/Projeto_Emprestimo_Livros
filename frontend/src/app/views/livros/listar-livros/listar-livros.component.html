@@ -1,0 +1,61 @@
+<div class="w-100 mb-3">
+    <button mat-raised-button color="primary" class="">
+      Novo
+    </button>
+  </div>
+  
+  <mat-table class="mat-elevation-z8">
+      
+    <!-- Header and Row Declarations -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  
+    <!-- User name Definition -->
+    <ng-container matColumnDef="nome">
+      <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.nome}} </mat-cell>
+    </ng-container>
+  
+      <!-- User Autor Definition -->
+    <ng-container matColumnDef="autor">
+        <mat-header-cell *matHeaderCellDef> Autor </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.autor}} </mat-cell>
+    </ng-container>
+      
+    <!-- Ano de Publicado Definition -->
+    <ng-container matColumnDef="anopublicado">
+      <mat-header-cell *matHeaderCellDef> Ano de Publicado </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.anopublicado}} </mat-cell>
+    </ng-container>
+  
+    <!-- Editora Definition -->
+    <ng-container matColumnDef="editora">
+      <mat-header-cell *matHeaderCellDef> Editora </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.editora}} </mat-cell>
+    </ng-container>
+    
+    <!-- ISBN Definition -->
+    <ng-container matColumnDef="isbn">
+      <mat-header-cell *matHeaderCellDef> Código ISBN </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.isbn}} </mat-cell>
+    </ng-container>
+
+    <!-- Quantidade de exemplares Definition -->
+    <ng-container matColumnDef="quanexemplares">
+        <mat-header-cell *matHeaderCellDef> Quantidade de Exemplares </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.quanexemplares}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes">
+      <mat-header-cell *matHeaderCellDef style="width:180px"> Ações </mat-header-cell>
+      <mat-cell *matCellDef="let row" style="width:180px">
+        <button mat-raised-button color="accent" class="me-2">
+          Editar
+        </button>
+        <button mat-raised-button color="warn" class="">
+          Excluir
+        </button>
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+  

@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ListarAutoresComponent } from './views/autores/listar-autores/listar-autores.component';
+import { ListarLivrosComponent } from './views/livros/listar-livros/listar-livros.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     HomeComponent,
     ListarClientesComponent,
     FooterComponent,
+    ListarAutoresComponent,
+    ListarLivrosComponent,
   ],
   imports: [
     CommonModule,
