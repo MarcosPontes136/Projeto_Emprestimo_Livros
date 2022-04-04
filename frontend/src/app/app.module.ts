@@ -19,6 +19,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ListarAutoresComponent } from './views/autores/listar-autores/listar-autores.component';
 import { ListarLivrosComponent } from './views/livros/listar-livros/listar-livros.component';
+import { ClientesFormComponent } from './views/clientes/clientes-form/clientes-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +32,7 @@ import { ListarLivrosComponent } from './views/livros/listar-livros/listar-livro
     FooterComponent,
     ListarAutoresComponent,
     ListarLivrosComponent,
+    ClientesFormComponent,
   ],
   imports: [
     CommonModule,
@@ -42,6 +47,8 @@ import { ListarLivrosComponent } from './views/livros/listar-livros/listar-livro
     MatTableModule,
     MatSnackBarModule,
     MatCheckboxModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
