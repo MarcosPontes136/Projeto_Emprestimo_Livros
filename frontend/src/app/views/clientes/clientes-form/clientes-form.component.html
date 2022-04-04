@@ -15,22 +15,22 @@
         <input type="text" class="form-control" placeholder=" exemplo@hotmail.com" required formControlName="email">
 
         <div class="valid-feedback" *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
-            <div class="valid-feedback" *ngIf="f.email.errors?.required">Informe um email!</div>
-            <div class="valid-feedback" *ngIf="f.email.errors?.pattern">Email Invalido!</div>
+            <div *ngIf="f.email.errors?.required">Informe um email!</div>
+            <div *ngIf="f.email.errors?.pattern">Email Invalido!</div>
         </div>
     </div>
 
     <div class="col-md-4">
         <label class="form-label">Contato </label>
-        <input type="text" placeholder="(00)000-000-000" required formControlName="contato" mask="(00) 0 0000-0000">
+        <input type="text" class="form-control" placeholder="(00)000-000-000" required formControlName="contato" mask="(00) 000-000-000">
 
         <div class="valid-feedback" *ngIf="f.contato.touched && f.contato.invalid" class="alert alert-danger">
-            <div class="valid-feedback" *ngIf="f.contato.errors?.required">Informe um telefone Válido!</div>
-            <div class="valid-feedback" *ngIf="f.contato.errors?.pattern">Informe um telefone com 11 digitos!</div>
+            <div *ngIf="f.contato.errors?.required">Informe um telefone Válido!</div>
+            <div *ngIf="f.contato.errors?.pattern">Informe um telefone com 11 digitos!</div>
         </div>
     </div>
-        <div class="col-12" style="margin-top: 50px;">
-            <button class="btn btn-primary" type="sumit" (click)="onSubimit()">Salvar</button>
+        <div id="btn" class="col-12">
+            <button class="btn btn-primary" type="button" (click)="onSubimit()">Salvar</button>
             <button class="btn btn-default" type="button" (click)="onCancel()">Cancelar</button>
         </div>
 </form>

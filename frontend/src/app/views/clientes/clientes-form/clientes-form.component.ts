@@ -1,6 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { AlertModalService } from 'src/app/shared/alert-modal.service';
 import { ClienteService } from '../clientes.service';
 
 @Component({
@@ -11,10 +13,13 @@ import { ClienteService } from '../clientes.service';
 export class ClientesFormComponent implements OnInit {
   public form!: FormGroup;
   
-  submitted: boolean = false;
+  submitted: boolean = false;  
   
-  
-  constructor(private fb: FormBuilder, private service: ClienteService, private location: Location) { }
+  constructor(private fb: FormBuilder, 
+    private service: ClienteService, 
+    private location: Location,
+    private modal: AlertModalService,
+    ) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -28,18 +33,17 @@ export class ClientesFormComponent implements OnInit {
     return this.form.controls;
   }
 
-  onSubimit(){
+  onSubimit(){ 
     this.submitted = true;
     console.log(this.form.value)
     if(this.form.valid){
       console.log('sumit');
       this.service.creationCliente(this.form.value).subscribe(
         success => {
-          console.log('sucesso');
+          this.modal.showAlertSuccess('Cliente criado!');
           this.location.back();
         },
-        error => console.error(error),
-        () => console.log('request completo')
+        error => this.modal.showAlertDanger('Erro ao criar cliente, tente de novamente')
       );
     }
   }

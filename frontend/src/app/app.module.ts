@@ -22,6 +22,8 @@ import { ListarLivrosComponent } from './views/livros/listar-livros/listar-livro
 import { ClientesFormComponent } from './views/clientes/clientes-form/clientes-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { NgxMaskModule, IConfig } from 'ngx-mask'
     MatCheckboxModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
+    ModalModule.forRoot(),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
