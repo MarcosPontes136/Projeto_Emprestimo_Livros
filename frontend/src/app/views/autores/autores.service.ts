@@ -18,4 +18,8 @@ export class AutorService {
       .get<Autor[]>(ApiUrl.listarAutores)
       .pipe(map((res) => res.map((c, i) => ({ ...c, id: i }))));
   }
+
+  creationAutor(Autor: Autor): Observable<Autor>{
+    return this.http.post<Autor>(this.AUTOR_API, Autor);
+  }
 }

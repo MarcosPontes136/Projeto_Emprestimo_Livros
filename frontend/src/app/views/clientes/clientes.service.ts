@@ -27,6 +27,8 @@ export class ClienteService {
       .get<Cliente[]>(ApiUrl.listarClientes)
       .pipe(map((res) => res.map((c, i) => ({ ...c, id: i }))));
   }
+
+  
   creationCliente(cliente: Cliente): Observable<Cliente>{
     return this.http.post<Cliente>(this.CLIENTE_API, cliente);
   }

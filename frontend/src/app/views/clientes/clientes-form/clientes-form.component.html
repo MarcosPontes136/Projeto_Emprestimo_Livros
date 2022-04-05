@@ -6,7 +6,7 @@
         <div class="valid-feedback" *ngIf="f.nome.touched && f.nome.invalid" class="alert alert-danger">
             <div *ngIf="f.nome.errors?.required">Informe um Nome!</div>
             <div *ngIf="f.nome.errors?.minlength">Nome precisa ter no mínimo 3 caracteres.</div>
-            <div *ngIf="f.nome.errors?.maxlength">Nome precisa ter no máximo 250 caracteres.</div>
+            <div *ngIf="f.nome.errors?.maxlength">Nome precisa ter no máximo 50 caracteres.</div>
         </div>
     </div>
 

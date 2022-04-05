@@ -24,6 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SharedModule } from './shared/shared.module';
+import { AutoresFormComponent } from './views/autores/autores-form/autores-form/autores-form.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SharedModule } from './shared/shared.module';
     ListarAutoresComponent,
     ListarLivrosComponent,
     ClientesFormComponent,
+    AutoresFormComponent,
   ],
   imports: [
     CommonModule,

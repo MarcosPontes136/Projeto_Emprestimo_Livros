@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AutoresFormComponent } from './views/autores/autores-form/autores-form/autores-form.component';
 import { ListarAutoresComponent } from './views/autores/listar-autores/listar-autores.component';
 import { ClientesFormComponent } from './views/clientes/clientes-form/clientes-form.component';
 import { ListarClientesComponent } from './views/clientes/listar-clientes/listar-clientes.component';
@@ -31,6 +32,11 @@ const routes: Routes = [
     path: 'autores/listar',
     component: ListarAutoresComponent,
     data: { pagetitle: 'Listar Autores' },
+  },
+  {
+    path: 'autores/form',
+    component: AutoresFormComponent,
+    data: { pagetitle: 'Formulario Autores'},
   },
   {
     path: 'livros/listar',

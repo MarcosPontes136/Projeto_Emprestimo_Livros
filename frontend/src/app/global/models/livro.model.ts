@@ -7,4 +7,3 @@ export default interface Livro {
     isbn: string;
     quantexemplares: string;
 }
-  
