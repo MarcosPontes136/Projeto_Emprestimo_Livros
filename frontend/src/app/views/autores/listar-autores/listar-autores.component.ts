@@ -11,14 +11,14 @@ export class ListarAutoresComponent implements OnInit {
   autorSelecionado!: Autor;
 
   
-  displayedColumns = ['nome', 'isni', 'email', 'datadeNascimento', 'biografia', 'acoes'];
+  displayedColumns = ['nome','isni', 'email','dataDeNascimento','biografia','acoes'];
 
   constructor(private autorApi: AutorService ) {}
 
-    ngOnInit(): void {
-      this.autorApi.listarAutores().subscribe((res) => {
-        this.autor = res;
-      });  
-    }
+  ngOnInit(): void {
+    this.autorApi.listarAutores().subscribe((res) => {
+      this.autor = res;
+    });  
+  }
 
 }

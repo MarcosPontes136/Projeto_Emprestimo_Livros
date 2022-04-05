@@ -4,7 +4,7 @@
     </button>
   </div>
   
-  <mat-table class="mat-elevation-z8">
+  <mat-table [dataSource]="livro" class="mat-elevation-z8">
       
     <!-- Header and Row Declarations -->
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
@@ -23,9 +23,9 @@
     </ng-container>
       
     <!-- Ano de Publicado Definition -->
-    <ng-container matColumnDef="anopublicado">
+    <ng-container matColumnDef="anoPublicado">
       <mat-header-cell *matHeaderCellDef> Ano de Publicado </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.anopublicado}} </mat-cell>
+      <mat-cell *matCellDef="let row"> {{row.anoPublicado}} </mat-cell>
     </ng-container>
   
     <!-- Editora Definition -->
@@ -41,9 +41,9 @@
     </ng-container>
 
     <!-- Quantidade de exemplares Definition -->
-    <ng-container matColumnDef="quanexemplares">
+    <ng-container matColumnDef="quantexemplares">
         <mat-header-cell *matHeaderCellDef> Quantidade de Exemplares </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.quanexemplares}} </mat-cell>
+        <mat-cell *matCellDef="let row"> {{row.quantexemplares}} </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="acoes">
