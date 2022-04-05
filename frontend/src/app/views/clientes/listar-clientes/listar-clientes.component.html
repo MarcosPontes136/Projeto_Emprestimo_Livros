@@ -29,14 +29,21 @@
   </ng-container>
 
   <ng-container matColumnDef="acoes">
-    <mat-header-cell *matHeaderCellDef style="width:180px"> Ações </mat-header-cell>
-    <mat-cell *matCellDef="let row" style="width:180px">
-      <button mat-raised-button color="accent" class="me-2">
-        Editar
-      </button>
-      <button mat-raised-button color="warn" class="">
-        Excluir
-      </button>
-    </mat-cell>
+      <mat-header-cell *matHeaderCellDef style="width:180px"> Ações </mat-header-cell>
+      <mat-cell *matCellDef="let row" style="width:180px">
+        <button mat-raised-button color="accent" class="me-2">
+          Editar
+        </button>
+        <button mat-raised-button color="warn" class="" (click)="onDelete(cliente)">
+          Excluir
+        </button>
+      </mat-cell>
   </ng-container>
 </mat-table>
+<ng-template #deleteModal>
+  <div class="modal-body text-center">
+    <p>Tem certeza que deseja remover esse cliente?</p>
+    <button type="button" class="btn btn-default" (click)="onConfirmDelete(id)">Sim</button>
+    <button type="button" class="btn btn-primary" (click)="onDeclineDelete()">Nao</button>
+  </div>
+</ng-template>

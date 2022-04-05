@@ -24,7 +24,7 @@ describe('ClientesService', () => {
   it('>> listarClientes | deve retornar Clientes[]', () => {
     const expectedData = [
       {
-        posicao: 0,
+        id: 0,
         nome: 'teste',
         email: 'teste',
         contato: 'teste',

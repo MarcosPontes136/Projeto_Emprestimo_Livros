@@ -1,12 +1,15 @@
-package br.com.stefanini.developerup.rest;
+package br.com.stefanini.developerup.cliente.rest;
 
-import br.com.stefanini.developerup.dto.ClienteDto;
-import br.com.stefanini.developerup.model.Cliente;
-import br.com.stefanini.developerup.service.ClienteService;
+
+
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.media.Content;
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
+
+import br.com.stefanini.developerup.cliente.dto.ClienteDto;
+import br.com.stefanini.developerup.cliente.model.Cliente;
+import br.com.stefanini.developerup.cliente.service.ClienteService;
 
 import java.net.URI;
 

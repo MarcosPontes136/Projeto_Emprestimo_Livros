@@ -1,15 +1,17 @@
-package br.com.stefanini.developerup.service;
+package br.com.stefanini.developerup.cliente.service;
 
 
 
-import br.com.stefanini.developerup.dao.ClienteDao;
-import br.com.stefanini.developerup.dto.ClienteDto;
-import br.com.stefanini.developerup.model.Cliente;
-import br.com.stefanini.developerup.parser.ClienteParser;
+
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
+
+import br.com.stefanini.developerup.cliente.dao.ClienteDao;
+import br.com.stefanini.developerup.cliente.dto.ClienteDto;
+import br.com.stefanini.developerup.cliente.model.Cliente;
+import br.com.stefanini.developerup.cliente.parser.ClienteParser;
 
 import java.util.List;
 import java.util.Optional;

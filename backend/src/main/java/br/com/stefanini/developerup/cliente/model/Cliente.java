@@ -1,4 +1,4 @@
-package br.com.stefanini.developerup.model;
+package br.com.stefanini.developerup.cliente.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.ws.rs.core.Response;
 
-import br.com.stefanini.developerup.dto.ClienteDto;
+import br.com.stefanini.developerup.cliente.dto.ClienteDto;
 
 /**
  * @author Danilo Dorgam

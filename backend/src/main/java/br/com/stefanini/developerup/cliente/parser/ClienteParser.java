@@ -1,7 +1,7 @@
-package br.com.stefanini.developerup.parser;
+package br.com.stefanini.developerup.cliente.parser;
 
-import br.com.stefanini.developerup.dto.ClienteDto;
-import br.com.stefanini.developerup.model.Cliente;
+import br.com.stefanini.developerup.cliente.dto.ClienteDto;
+import br.com.stefanini.developerup.cliente.model.Cliente;
 
 /**
  * @author Danilo Dorgam

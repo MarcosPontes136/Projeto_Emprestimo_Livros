@@ -23,6 +23,11 @@ const routes: Routes = [
     data: { pagetitle: 'Formulario de clientes'},
   },
   {
+    path: 'edit/:id',
+    component: ClientesFormComponent,
+    data: { pagetitle: 'Editar clientes'},
+  },
+  {
     path: 'autores/listar',
     component: ListarAutoresComponent,
     data: { pagetitle: 'Listar Autores' },

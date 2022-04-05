@@ -1,9 +1,9 @@
-package br.com.stefanini.developerup.dao;
+package br.com.stefanini.developerup.cliente.dao;
 
-import br.com.stefanini.developerup.model.Cliente;
 import io.quarkus.panache.common.Sort;
-
 import javax.enterprise.context.RequestScoped;
+import br.com.stefanini.developerup.cliente.model.Cliente;
+
 import java.util.List;
 
 /**

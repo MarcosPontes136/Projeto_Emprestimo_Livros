@@ -1,4 +1,4 @@
-package br.com.stefanini.developerup.dto;
+package br.com.stefanini.developerup.cliente.dto;
 
 /**
  * @author Danilo Dorgam
