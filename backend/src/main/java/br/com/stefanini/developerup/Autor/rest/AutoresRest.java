@@ -46,7 +46,7 @@ public class AutoresRest {
             content = {@Content(mediaType = "application/json",
                     schema = @Schema(implementation = AutoresDto.class))})
     public Response saveAutor(AutoresDto dto){
-        Autores autores = service.saveCliente(dto);
+        Autores autores = service.saveAutor(dto);
         
         return Response.created(URI.create("/autor/" + autores.getId())).build();
     }
@@ -64,7 +64,7 @@ public class AutoresRest {
     }
     @DELETE
     @Operation(summary = "Remover", description = "Remover um Autor")
-    @APIResponse(responseCode = "204", description = "ClienteDto",
+    @APIResponse(responseCode = "204", description = "AutoresDto",
             content = {@Content(mediaType = "application/json",
                     schema = @Schema(implementation = AutoresDto.class))})
     @Path("{id}")

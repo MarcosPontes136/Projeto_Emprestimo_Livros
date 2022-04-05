@@ -24,7 +24,7 @@ public class AutorService {
     }
 
         @Transactional
-        public Autores saveCliente(AutoresDto dto){
+        public Autores saveAutor(AutoresDto dto){
             Autores autores = new Autores();
 
             autores.setNome(dto.getNome());

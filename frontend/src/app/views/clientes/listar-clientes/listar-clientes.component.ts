@@ -35,7 +35,7 @@ export class ListarClientesComponent implements OnInit {
       this.clientes = res;
     });
 
-   // this.onRefresh();
+    this.onRefresh();
   }
   onRefresh() {
     this.cliente$ = this.clienteApi.list().pipe(

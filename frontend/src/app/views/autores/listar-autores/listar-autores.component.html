@@ -4,8 +4,7 @@
   </button>
 </div>
 
-<mat-table class="mat-elevation-z8">
-    
+<mat-table [dataSource]="autor" class="mat-elevation-z8">
   <!-- Header and Row Declarations -->
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
@@ -16,11 +15,11 @@
     <mat-cell *matCellDef="let row"> {{row.nome}} </mat-cell>
   </ng-container>
 
-    <!-- User isni Definition -->
-    <ng-container matColumnDef="isni">
-        <mat-header-cell *matHeaderCellDef> ISNI </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.isni}} </mat-cell>
-    </ng-container>
+  <!-- User isni Definition -->
+  <ng-container matColumnDef="isni">
+      <mat-header-cell *matHeaderCellDef> ISNI </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.isni}} </mat-cell>
+  </ng-container>
     
   <!-- Age Definition -->
   <ng-container matColumnDef="email">
@@ -31,7 +30,7 @@
   <!-- DatadeNascimento Definition -->
   <ng-container matColumnDef="datadeNascimento">
     <mat-header-cell *matHeaderCellDef> Data de Nascimento </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.datadeNascimento}} </mat-cell>
+    <mat-cell *matCellDef="let row"> {{row.dataDeNascimento}} </mat-cell>
   </ng-container>
   
   <!-- biografia Definition -->
