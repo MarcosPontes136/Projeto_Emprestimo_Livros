@@ -23,8 +23,8 @@
         <input type="text" class="form-control" placeholder="0000000000000000" required formControlName="isni">
 
         <div class="valid-feedback" *ngIf="f.isni.touched && f.isni.invalid" class="alert alert-danger">
-            <div *ngIf="f.email.errors?.required">Informe um ISNI com 16!</div>
-            <div *ngIf="f.email.errors?.pattern">ISNI Invalido!</div>
+            <div *ngIf="f.isni.errors?.required">Informe um ISNI com 16 digitos!</div>
+            <div *ngIf="f.isni.errors?.pattern">ISNI Invalido!</div>
         </div>
     </div>
     
@@ -33,8 +33,8 @@
         <input type="text" class="form-control" placeholder="MM/DD/YYYY" required formControlName="dataDeNascimento" mask="00/00/0000">
 
         <div class="valid-feedback" *ngIf="f.dataDeNascimento.touched && f.dataDeNascimento.invalid" class="alert alert-danger">
-            <div *ngIf="f.contato.errors?.required">Informe uma nascimento Válido!</div>
-            <div *ngIf="f.contato.errors?.pattern">Informe um nascimento anterior</div>
+            <div *ngIf="f.dataDeNascimento.errors?.required">Informe uma nascimento Válido!</div>
+            <div *ngIf="f.dataDeNascimento.errors?.pattern">Informe um nascimento anterior</div>
         </div>
     </div>
 
@@ -52,8 +52,8 @@
           <label for="validationTextarea" class="form-label">Biografia</label>
           <textarea class="form-control is-invalid" placeholder="Escreva" required formControlName="biografia"></textarea>
           <div class="valid-feedback" *ngIf="f.biografia.touched && f.biografia.invalid" class="alert alert-danger">
-            <div *ngIf="f.nome.errors?.required">Informe uma Biografia!</div>
-            <div *ngIf="f.nome.errors?.maxlength">Nome precisa ter no máximo 250 caracteres.</div>
+            <div *ngIf="f.biografia.errors?.required">Informe uma Biografia!</div>
+            <div *ngIf="f.biografia.errors?.maxlength">Nome precisa ter no máximo 250 caracteres.</div>
         </div>
     </div>
     <div id="btn" class="col-12">

@@ -1,0 +1,62 @@
+<form class="needs-validation row g-3" novalidate [formGroup]="form">
+    <div class="col-md-4">
+        <label class="form-label">Nome </label>
+        <input type="text" class="form-control" placeholder=" Exemplo" required formControlName="nome">
+        
+        <div class="valid-feedback" *ngIf="f.nome.touched && f.nome.invalid" class="alert alert-danger">
+            <div *ngIf="f.nome.errors?.required">Informe um Nome!</div>
+            <div *ngIf="f.nome.errors?.minlength">Nome precisa ter no mínimo 3 caracteres.</div>
+            <div *ngIf="f.nome.errors?.maxlength">Nome precisa ter no máximo 50 caracteres.</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">Editora </label>
+        <input type="text" class="form-control" placeholder=" Exemple" required formControlName="editora">
+
+        <div class="valid-feedback" *ngIf="f.editora.touched && f.editora.invalid" class="alert alert-danger">
+            <div *ngIf="f.editora.errors?.required">Informe uma Editora!</div>
+            <div *ngIf="f.editora.errors?.pattern">Editora Invalido!</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label class="form-label">ISBN </label>
+        <input type="text" class="form-control" placeholder="0000000000000" required formControlName="isbn" mask="0000000000000">
+
+        <div class="valid-feedback" *ngIf="f.isbn.touched && f.isbn.invalid" class="alert alert-danger">
+            <div *ngIf="f.isbn.errors?.required">Informe um ISBN com 13 digitos!</div>
+            <div *ngIf="f.isbn.errors?.pattern">ISBN Invalido!</div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <label class="form-label">Autor </label>
+        <input type="text" class="form-control" placeholder=" Exemplo" required formControlName="autor">
+        <div class="valid-feedback" *ngIf="f.autor.touched && f.autor.invalid" class="alert alert-danger">
+            <div *ngIf="f.autor.errors?.required">Informe um Autor!</div>
+            <div *ngIf="f.autor.errors?.minlength">Nome precisa ter no mínimo 3 caracteres.</div>
+            <div *ngIf="f.autor.errors?.maxlength">Nome precisa ter no máximo 50 caracteres.</div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Ano de Publicado </label>
+        <input type="text" class="form-control" placeholder="DD/MM/YYYY" required formControlName="anoPublicado" mask="00/00/0000">
+        <div class="valid-feedback" *ngIf="f.anoPublicado.touched && f.anoPublicado.invalid" class="alert alert-danger">
+            <div *ngIf="f.anoPublicado.errors?.required">Informe uma data Válido!</div>
+            <div *ngIf="f.anoPublicado.errors?.pattern">Informe um ano Válido!</div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label class="form-label">Quantidade de Exemplares </label>
+        <input type="text" class="form-control" placeholder="00000000000" required formControlName="quantexemplares">
+        <div class="valid-feedback" *ngIf="f.quantexemplares.touched && f.quantexemplares.invalid" class="alert alert-danger">
+            <div *ngIf="f.quantexemplares.errors?.required">Informe um número!</div>
+            <div *ngIf="f.quantexemplares.errors?.pattern">Informe só números!</div>
+        </div>
+    </div>
+    <div id="btn" class="col-12">
+        <button class="btn btn-primary" type="button" (click)="onSubimit()">Salvar</button>
+        <button class="btn btn-default" type="button" (click)="onCancel()">Cancelar</button>
+    </div>
+</form>

@@ -2,56 +2,55 @@ import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AlertModalService } from 'src/app/shared/alert-modal.service';
-import { AutorService } from '../../autores.service';
+import { LivrosService } from '../livros.service';
 
 @Component({
-  selector: 'app-autores-form',
-  templateUrl: './autores-form.component.html',
-  styleUrls: ['./autores-form.component.scss']
+  selector: 'app-livros-form',
+  templateUrl: './livros-form.component.html',
+  styleUrls: ['./livros-form.component.scss']
 })
-export class AutoresFormComponent implements OnInit {
-
+export class LivrosFormComponent implements OnInit {
   public form!: FormGroup;
-  
   submitted: boolean = false;  
-
+  
   constructor(private fb: FormBuilder, 
-    private service: AutorService, 
+    private service: LivrosService, 
     private location: Location,
     private modal: AlertModalService,) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
       nome: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
-      email: [null, [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
-      contato: [null, [Validators.required, Validators.pattern("[0-9]{11}")]],
-      isni: [null, [Validators.required, Validators.pattern("[0-9]{16}")]],
-      dataDeNascimento: [null, [Validators.required,]],
-      biografia: [null, [Validators.required, Validators.maxLength(250)]],
+      editora: [null,[Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
+      autor: [null, [Validators.required, Validators.minLength(3), Validators.maxLength(50)]],
+      anoPublicado: [null, [Validators.required]],
+      isbn: [null, [Validators.required, Validators.pattern("[0-9]{13}")]],
+      quantexemplares: [null, [Validators.required, Validators.pattern("[0-9]") ]]
     });
   }
 
   get f(){
     return this.form.controls;
   }
-  onSubimit(){ 
+
+  onSubimit(){
     this.submitted = true;
     console.log(this.form.value)
     if(this.form.valid){
       console.log('sumit');
-      this.service.creationAutor(this.form.value).subscribe(
+      this.service.creationLivro(this.form.value).subscribe(
         success => {
-          this.modal.showAlertSuccess('Autor criado!');
+          this.modal.showAlertSuccess('Livro criado!');
           this.location.back();
         },
-        error => this.modal.showAlertDanger('Erro ao criar autor, tente de novamente')
+        error => this.modal.showAlertDanger('Erro ao criar livro, tente de novamente')
       );
     }
   }
-
   onCancel(){
     this.submitted = false;
     this.form.reset;
     this.location.back();
   }
+
 }

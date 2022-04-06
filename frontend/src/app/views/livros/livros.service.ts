@@ -18,4 +18,8 @@ export class LivrosService {
       .get<Livro[]>(ApiUrl.listarLivros)
       .pipe(map((res) => res.map((c, i) => ({ ...c, id: i }))));
   }
+
+  creationLivro(Livro: Livro): Observable<Livro>{
+    return this.http.post<Livro>(this.LIVRO_API, Livro);
+  }
 }

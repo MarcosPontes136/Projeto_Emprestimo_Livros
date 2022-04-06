@@ -25,6 +25,7 @@ import { NgxMaskModule, IConfig } from 'ngx-mask'
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { SharedModule } from './shared/shared.module';
 import { AutoresFormComponent } from './views/autores/autores-form/autores-form/autores-form.component';
+import { LivrosFormComponent } from './views/livros/livros-form/livros-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AutoresFormComponent } from './views/autores/autores-form/autores-form/
     ListarLivrosComponent,
     ClientesFormComponent,
     AutoresFormComponent,
+    LivrosFormComponent,
   ],
   imports: [
     CommonModule,

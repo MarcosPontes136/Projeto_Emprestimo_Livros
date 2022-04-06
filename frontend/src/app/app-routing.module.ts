@@ -6,6 +6,7 @@ import { ClientesFormComponent } from './views/clientes/clientes-form/clientes-f
 import { ListarClientesComponent } from './views/clientes/listar-clientes/listar-clientes.component';
 import { HomeComponent } from './views/home/home.component';
 import { ListarLivrosComponent } from './views/livros/listar-livros/listar-livros.component';
+import { LivrosFormComponent } from './views/livros/livros-form/livros-form.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,11 @@ const routes: Routes = [
     path: 'livros/listar',
     component: ListarLivrosComponent,
     data: { pageTitle: 'Listar Livros'},
+  },
+  {
+    path: 'livros/form',
+    component: LivrosFormComponent,
+    data: { pageTitle: 'Formulario Livros'},
   },
 ];
 
