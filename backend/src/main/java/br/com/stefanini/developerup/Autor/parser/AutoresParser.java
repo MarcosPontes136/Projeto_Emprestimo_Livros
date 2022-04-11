@@ -8,9 +8,10 @@ public class AutoresParser {
         return  new AutoresParser();
     }
 
-    public AutoresDto dto(Autores entidade){
-        AutoresDto dto = new AutoresDto();
+    public AutoresDto dto(Autores entidade) {
 
+        AutoresDto dto = new AutoresDto();
+        
         dto.setNome(entidade.getNome());
         dto.setIsni(entidade.getIsni());
         dto.setEmail(entidade.getEmail());
@@ -19,7 +20,7 @@ public class AutoresParser {
         return dto;
     }
     
-    public Autores saveCliente(AutoresDto dto){
+    public Autores saveCliente(AutoresDto dto) {
         Autores autores = new Autores();
 
         autores.setNome(dto.getNome());
